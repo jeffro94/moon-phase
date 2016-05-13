@@ -1,0 +1,12 @@
+{
+  "name": "moon-phase",
+  "version": "1.0.0",
+  "description": "A cool moon-phase app using suncalc.",
+  "private": true,
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-route": "^1.5.0",
+    "bootstrap": "^3.3.0",
+    "quantopy-suncalc": "~1.0.0"
+  }
+}

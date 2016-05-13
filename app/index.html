@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" ng-app="moonApp">
+<head>
+  <meta charset="utf-8">
+  <title>moon-phase</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="index.css">
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/quantopy-suncalc/suncalc.js"></script>
+  <script src="index.js"></script>
+</head>
+<body ng-controller="MoonCtrl">
+
+<div id="main" class="container">
+  <h1>moon-phase</h1>
+  
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>location</h3>
+      <p>Latitude: <b>{{geoLocation.lat | number:5 }}</b></p>
+      <p>Longitude: <b>{{geoLocation.long | number:5 }}</b></p>
+    </div>
+    <div class="col-sm-6">
+      <h3>current date</h3>
+      <p>{{today | date:'medium'}}</p>
+      <p>{{today | date:'yyyy-MM-dd HH:mm:ss Z'}}</p>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>the sun</h3>
+      <p>sunrise: {{times.sunrise | date:'mediumTime'}}</p>
+      <p>sunset: {{times.sunset | date:'mediumTime'}}</p>
+    </div>
+    <div class="col-sm-6">
+      <h3>the moon</h3>
+      <p>illumination: {{moonInfo.illumination.fraction * 100 | number:1}}%</p>
+      <p>moonrise: {{moonInfo.times.rise | date:'mediumTime'}}</p>
+      <p>moonset: {{moonInfo.times.set | date:'mediumTime'}}</p>
+    </div>
+  </div>
+  
+  <div id="debug">
+    <h3>location json</h3>
+    <pre>{{geoLocation | json}}</pre>
+    
+    <h3>suncalc times</h3>
+    <pre>{{times | json}}</pre>
+    
+    <h3>moon times</h3>
+    <pre>{{moonInfo | json}}</pre>
+  </div>
+  
+</div>
+</body>
+</html>
