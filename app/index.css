@@ -3,3 +3,7 @@
 #debug {
     margin-top: 4em;
 }
+
+.error {
+    color: maroon;
+}
