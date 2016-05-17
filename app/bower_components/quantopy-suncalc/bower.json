@@ -1,0 +1,29 @@
+{
+  "name": "quantopy-suncalc",
+  "description": "A tiny JavaScript library for calculating sun/moon positions and phases.",
+  "main": "suncalc.js",
+  "authors": [
+    "Quantopy"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "sun",
+    "astronomy",
+    "math",
+    "calculation",
+    "sunrise",
+    "sunset",
+    "twilight",
+    "moon",
+    "illumination"
+  ],
+  "homepage": "https://github.com/Quantopy/suncalc",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
